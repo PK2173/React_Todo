@@ -1,0 +1,46 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
+
+
+<footer className='bg-dark text-light py-3'>
+      <p className='text-center'>
+      Copyright &copy; || All Right Are Reserve My TodoList.com
+      </p>
+    </footer>
+
+
+    position: 'absolute',
+  top: "100vh",
+  'margin-top': '2%',
+    width: '100%'
+
+
+
+     return (
+    <>
+      <Router>
+        <Header title="MyTodoList" searchbar={true} />
+        <Switch>
+          <Route exact path="/" render={() => {
+            return (
+              <>
+                <AddTodo addTodo={addTodo} />
+                <Todos todos={todos} onDelete={onDelete} />
+              </>
+            )
+          }}>
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+        </Switch>
+
+
+
+
+        <Footer />
+      </Router>
+    </>
+  )
+}
